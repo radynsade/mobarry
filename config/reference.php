@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @author Nikita Prokopenko <radynje@gmail.com>
+ */
+
+declare(strict_types = 1);
+
 // This file is auto-generated and is for apps only. Bundles SHOULD NOT rely on its content.
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
@@ -732,20 +738,16 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     }>
  * }
  */
-final class App
-{
-    /**
-     * @param ConfigType $config
-     *
-     * @psalm-return ConfigType
-     */
-    public static function config(array $config): array
-    {
-        /** @var ConfigType $config */
-        $config = AppReference::config($config);
-
-        return $config;
-    }
+final class App {
+	/**
+	 * @param ConfigType $config
+	 *
+	 * @psalm-return ConfigType
+	 */
+	public static function config(array $config): array {
+		/** @var ConfigType $config */
+		return AppReference::config($config);
+	}
 }
 
 namespace Symfony\Component\Routing\Loader\Configurator;
@@ -812,15 +814,13 @@ namespace Symfony\Component\Routing\Loader\Configurator;
  *     ...<string, RouteConfig|ImportConfig|AliasConfig>
  * }
  */
-final class Routes
-{
-    /**
-     * @param RoutesConfig $config
-     *
-     * @psalm-return RoutesConfig
-     */
-    public static function config(array $config): array
-    {
-        return $config;
-    }
+final class Routes {
+	/**
+	 * @param RoutesConfig $config
+	 *
+	 * @psalm-return RoutesConfig
+	 */
+	public static function config(array $config): array {
+		return $config;
+	}
 }
